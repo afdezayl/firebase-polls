@@ -1,4 +1,4 @@
-import { Controller, Get, Query } from '@nestjs/common';
+import { Controller, Get, Query, Logger } from '@nestjs/common';
 
 import { AppService } from './app.service';
 
@@ -12,7 +12,7 @@ export class AppController {
   }
   @Get('echo')
   echo(@Query() params) {
-    console.log('request query string:', params);
+    console.log(new Date(), 'request query string:', params);
     return params;
   }
 }

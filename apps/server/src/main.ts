@@ -2,7 +2,7 @@ import { Logger } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
 import { ExpressAdapter } from '@nestjs/platform-express';
 import * as express from 'express';
-import * as functions from 'firebase-functions';
+import * as functions from 'firebase-functions'; // not working synthetic import
 
 import { AppModule } from './app/app.module';
 
