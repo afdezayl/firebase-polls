@@ -2,5 +2,10 @@
   "functions": {
     "source": "/",
     "predeploy": "npm run build server"
+  },
+  "emulators": {
+    "functions": {
+      "port": 5000
+    }
   }
 }
