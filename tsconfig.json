@@ -16,7 +16,18 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@polls/auth/feature-auth-server": [
+        "libs/auth/feature-auth-server/src/index.ts"
+      ],
+      "@polls/auth/shared-auth-interfaces": [
+        "libs/auth/shared-auth-interfaces/src/index.ts"
+      ],
+      "@polls/ui/ui-material": ["libs/ui/ui-material/src/index.ts"],
+      "@polls/auth/feature-login-web": [
+        "libs/auth/feature-login-web/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

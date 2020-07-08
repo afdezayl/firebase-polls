@@ -1,0 +1,78 @@
+<mat-toolbar color="primary" class="toolbar">
+  <span>Polls</span>
+  <div>
+    <button mat-button [matMenuTriggerFor]="settings">
+      <mat-icon>settings</mat-icon>
+    </button>
+    <button mat-button [matMenuTriggerFor]="user">
+      <mat-icon>account_circle</mat-icon>
+    </button>
+  </div>
+</mat-toolbar>
+
+<mat-menu #settings="matMenu">
+  <button mat-menu-item>
+    <mat-icon>language</mat-icon>
+    Idioma
+  </button>
+  <button mat-menu-item (click)="changeTheme()">
+    <mat-icon>format_color_fill</mat-icon>
+    Tema
+  </button>
+</mat-menu>
+
+<mat-menu #user="matMenu" [dir]="'rtl'">
+  <button mat-menu-item (click)="logout()">
+    <mat-icon>exit_to_app</mat-icon>
+    Salir
+  </button>
+</mat-menu>
+
+<ng-container *ngIf="authService.user | async as user">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Bienvenido {{ user.displayName }}!</mat-card-title>
+      <mat-card-subtitle>{{ user.email }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content> </mat-card-content>
+  </mat-card>
+</ng-container>
+<mat-card>
+  <button mat-raised-button color="primary">
+    <mat-icon>home</mat-icon>
+    Primary
+  </button>
+  <button mat-raised-button color="accent">
+    <mat-icon>home</mat-icon>
+    Accent
+  </button>
+  <button mat-raised-button color="warn">
+    <mat-icon>home</mat-icon>
+    Warn
+  </button>
+</mat-card>
+<mat-card>
+  <mat-spinner color="primary"></mat-spinner>
+  <mat-spinner color="accent"></mat-spinner>
+  <mat-spinner color="warn"></mat-spinner>
+</mat-card>
+<mat-card>
+  <mat-form-field appearance="fill">
+    <mat-label>Input:</mat-label>
+    <input matInput placeholder="label" />
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Select:</mat-label>
+    <mat-select placeholder="afsa" name="item">
+      <mat-option value="a">
+        a
+      </mat-option>
+      <mat-option value="b">
+        b
+      </mat-option>
+      <mat-option value="c">
+        c
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</mat-card>

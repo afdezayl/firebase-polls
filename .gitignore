@@ -39,3 +39,5 @@ testem.log
 Thumbs.db
 firebase-debug.log
 ui-debug.log
+.firebase
+.firebase-certs/*.json

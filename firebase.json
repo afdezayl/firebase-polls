@@ -1,11 +1,21 @@
 {
   "functions": {
     "source": "/",
-    "predeploy": "npm run build server"
+    "predeploy": "npm run build server --prod"
+  },
+  "hosting": {
+    "public": "dist/apps/front",
+    "predeploy": "npm run build front -- --prod",
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
   },
   "emulators": {
     "functions": {
-      "port": 5000
+      "host": "0.0.0.0"
     }
   }
 }

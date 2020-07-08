@@ -1,0 +1,23 @@
+:host {
+  /* vertical and horizontal align */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* full height */
+  min-height: 100%;
+}
+
+.container {
+  max-width: 600px;
+}
+
+.providers-list {
+  padding: 1.5rem;
+}
+
+.provider-item {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

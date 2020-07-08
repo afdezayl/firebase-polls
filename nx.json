@@ -24,6 +24,25 @@
   "projects": {
     "server": {
       "tags": []
+    },
+    "front": {
+      "tags": []
+    },
+    "front-e2e": {
+      "tags": [],
+      "implicitDependencies": ["front"]
+    },
+    "auth-feature-auth-server": {
+      "tags": []
+    },
+    "auth-shared-auth-interfaces": {
+      "tags": []
+    },
+    "ui-ui-material": {
+      "tags": []
+    },
+    "auth-feature-login-web": {
+      "tags": []
     }
   }
 }
