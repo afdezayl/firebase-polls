@@ -14,7 +14,6 @@
 @import './themes/dark-theme.scss';
 @import './themes/candy-theme.scss';
 
-// TODO: move default logic to component
 .default-theme {
   @include angular-material-theme($default-theme);
   @include body-background($default-theme);

@@ -1,9 +1,4 @@
-import { Component, OnInit, Inject } from '@angular/core';
-import { OverlayContainer } from '@angular/cdk/overlay';
-import { of, from, interval } from 'rxjs';
-import { delay, tap, debounce, debounceTime, take, map } from 'rxjs/operators';
-import { DOCUMENT } from '@angular/common';
-import { environment } from '../environments/environment';
+import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 
 @Component({
