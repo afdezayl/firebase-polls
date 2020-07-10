@@ -1,7 +1,7 @@
 {
   "functions": {
-    "source": "/",
-    "predeploy": "npm run build server --prod"
+    "source": "dist/apps/server",
+    "predeploy": "nx build server --with-deps --skip-nx-cache --optimization"
   },
   "hosting": {
     "public": "dist/apps/front",

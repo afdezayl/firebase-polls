@@ -7,6 +7,8 @@ export class AuthController {
   @Post('login')
   async validateToken(@Body() loginRequest: LoginRequestDTO) {
     console.log(loginRequest);
+    const admin = firebase;
+
     /* const claims = await firebase
       .auth()
       .verifyIdToken(loginRequest.idToken, true);
