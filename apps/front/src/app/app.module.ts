@@ -30,6 +30,8 @@ import { ApiInterceptor } from './interceptors/api.interceptor';
       useClass: ApiInterceptor,
       multi: true,
     },
+    // TODO: MatPaginatorIntl
+    //{ provide: MatPaginatorIntl, useClass: MatPaginatorIntlLoc },
   ],
   bootstrap: [AppComponent],
 })

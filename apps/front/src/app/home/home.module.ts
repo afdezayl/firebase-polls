@@ -5,12 +5,19 @@ import { RouterModule, Routes } from '@angular/router';
 import { MaterialModule } from '@polls/ui/ui-material';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
-
+import {
+  ShowPaginatorCurrentPageDirective,
+  DynamicPaginatorExtensionComponent
+} from './show-paginator-current-page.directive';
 
 const routes: Routes = [{ path: '', component: HomeComponent }];
 
 @NgModule({
-  declarations: [HomeComponent],
+  declarations: [
+    HomeComponent,
+    ShowPaginatorCurrentPageDirective,
+    DynamicPaginatorExtensionComponent,
+  ],
   imports: [
     CommonModule,
     AngularFireModule,
